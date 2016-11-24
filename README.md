@@ -6,18 +6,19 @@
 ### Define style
 * Add `IdentifiableUIKit` to your project.
 * Create classes adapt `StyleType` protocols listed below
-  * `ButtonStyleType`
-	* `ColorStyleType`
+    * `ButtonStyleType`
+    * `ColorStyleType`
 	* `LabelStyleType`
 	* `ViewStyleType`  
 
-```
+```swift
 class MyColorStyle: NSObject, ColorStyleType {
     
     static var colorDic: [String : UIColor] = [
         
-			"C01": UIColor.redColor
-		]
+        "C01": UIColor.redColor,
+        …
+    ]
 }
 ```
 
@@ -28,10 +29,10 @@ class MyColorStyle: NSObject, ColorStyleType {
 	* `IdentifiableView`
 * Set variables of subclass of `IdentifiableView` to classes adapt `StyleType`
 
-```
+```swift
 class MyView: IdentifiableView {
 	overridevar colorStyle: ColorStyleType.Type? {
-		returnMyColorStyle.self
+		return MyColorStyle.self
 	}
 }
 ```
