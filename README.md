@@ -48,6 +48,7 @@ class MyView: IdentifiableView {
 
 * Add `IdentifiableTableViewCell`, `IdentifiableTextView`, `IdentifiableTextField`, and so on.
 
+* Swift 3.0 compatible
 
 ## Environment
 
